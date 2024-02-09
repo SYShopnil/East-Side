@@ -1,0 +1,33 @@
+.title {
+  @apply inline bg-secondaryGradient  text-body bg-clip-text;
+  font-weight: inherit;
+  transition: all 0.35s ease-in-out;
+  .title-inner {
+    @apply inline pb-0 bg-secondaryGradient;
+    transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: left 100%;
+  }
+  &:hover {
+    @apply text-body/[0];
+    .title-inner {
+      background-size: 100% 1px;
+    }
+  }
+  &.black {
+    @apply text-body;
+    &:hover {
+      @apply text-body/[0];
+    }
+  }
+  &.white {
+    @apply bg-gradient-to-r from-white to-white  text-white;
+    .title-inner {
+      @apply bg-gradient-to-r from-white to-white;
+    }
+    &:hover {
+      @apply text-white/[0];
+    }
+  }
+}

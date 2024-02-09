@@ -1,0 +1,5 @@
+# Disallow crawling of the entire website
+User-agent: *
+Allow: /
+
+Sitemap: https://ephemeral-khapse-cbe893.netlify.app/sitemap.xml

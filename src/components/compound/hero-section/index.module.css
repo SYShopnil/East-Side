@@ -1,0 +1,319 @@
+/*
+    working on screen width 1420px to 1899px
+*/
+
+.primary-title-wrapper {
+  @apply bg-secondaryGradient;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* main wrapper */
+.main-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}
+
+/* left side part */
+.shape-one {
+  overflow: hidden;
+  position: relative;
+  /* --Xpos: 3vh;
+  --Ypos: -11vh; */
+  animation: shape-one-animation 5s ease-in-out both;
+}
+.shape-one::before {
+  content: '';
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle 13em at var(--Xpos) var(--Ypos),
+    rgba(97, 8, 180, 0),
+    rgba(0, 0, 0, 1)
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-blend-mode: overlay;
+  background-repeat: no-repeat; */
+}
+@keyframes shape-one-animation {
+  from {
+    --Xpos: 3vh;
+    --Ypos: -11vh;
+  }
+
+  to {
+    --Xpos: 38vh;
+    --Ypos: 62vh;
+  }
+}
+
+/* shape two  */
+.shape-two {
+  overflow: hidden;
+  position: relative;
+
+  --Xpos: 80vh;
+  --Ypos: 73vh;
+}
+.shape-two::before {
+  content: '';
+  display: block;
+
+  width: 859%;
+  height: 1022%;
+
+  position: absolute;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle 11em at var(--Xpos) var(--Ypos),
+    rgba(97, 8, 180, 0),
+    rgba(0, 0, 0, 1)
+  );
+  top: 0;
+  left: 0;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  animation: shape-two-animation 5s ease-in both;
+}
+
+/* @keyframes shape-two-animation {
+  from {
+    background-position: -40rem -44rem;
+  }
+
+  to {
+    background-position: -39rem -9rem;
+  }
+} */
+/* right part  */
+
+.shape-three {
+  overflow: hidden;
+  position: relative;
+  --Xpos: 80vh;
+  --Ypos: 136vh;
+}
+.shape-three::before {
+  content: '';
+  display: block;
+
+  width: 859%;
+  height: 1022%;
+
+  position: absolute;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle 13em at var(--Xpos) var(--Ypos),
+    rgba(97, 8, 180, 0),
+    rgba(0, 0, 0, 1)
+  );
+  top: 0;
+  left: 0;
+  /* background-position: -39rem -56rem; */
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  animation: shape-three-animation 5s ease-in both;
+}
+
+/* @keyframes shape-three-animation {
+  from {
+    background-position: -37rem -49rem;
+  }
+  to {
+    background-position: -37rem -150rem;
+  }
+} */
+
+/* for big desktop */
+/* @media only screen and (min-width: 2500px) {
+  @keyframes shape-one-animation {
+    from {
+      background-position: -49rem -73rem;
+    }
+
+    to {
+      background-position: -31rem -31rem;
+    }
+  }
+  @keyframes shape-two-animation {
+    from {
+      background-position: -55rem -61rem;
+    }
+
+    to {
+      background-position: -54rem -11rem;
+    }
+  }
+  @keyframes shape-three-animation {
+    from {
+      background-position: -49rem -73rem;
+    }
+    to {
+      background-position: -52rem -150rem;
+    }
+  }
+} */
+
+/*for normal desktop */
+/* @media only screen and (max-width: 2560px) and (min-width: 2900px) {
+  @keyframes shape-one-animation {
+    from {
+      background-position: -49rem -73rem;
+    }
+
+    to {
+      background-position: -31rem -31rem;
+    }
+  }
+  @keyframes shape-two-animation {
+    from {
+      background-position: -55rem -61rem;
+    }
+
+    to {
+      background-position: -54rem -11rem;
+    }
+  }
+  @keyframes shape-three-animation {
+    from {
+      background-position: -49rem -73rem;
+    }
+    to {
+      background-position: -52rem -150rem;
+    }
+  }
+} */
+
+/* @media only screen and (max-width: 2499px) and (min-width: 2100px) {
+  @keyframes shape-one-animation {
+    from {
+      background-position: -42rem -63rem;
+    }
+
+    to {
+      background-position: -22rem -23rem;
+    }
+  }
+  @keyframes shape-two-animation {
+    from {
+      background-position: -45rem -54rem;
+    }
+
+    to {
+      background-position: -45rem -16rem;
+    }
+  }
+  @keyframes shape-three-animation {
+    from {
+      background-position: -40rem -57rem;
+    }
+    to {
+      background-position: -40rem -130rem;
+    }
+  }
+} */
+
+/*for  big laptop */
+/* @media only screen and (max-width: 1910px) and (min-width: 1720px) {
+  @keyframes shape-one-animation {
+    from {
+      background-position: -36rem -53rem;
+    }
+
+    to {
+      background-position: -14rem -13rem;
+    }
+  }
+  @keyframes shape-two-animation {
+    from {
+      background-position: -34rem -46rem;
+    }
+
+    to {
+      background-position: -34rem 0rem;
+    }
+  }
+  @keyframes shape-three-animation {
+    from {
+      background-position: -35rem -37rem;
+    }
+    to {
+      background-position: -32rem -84rem;
+    }
+  }
+} */
+
+/*for  small laptop */
+/* @media only screen and (max-width: 1909px) and (min-width: 1440px) {
+  @keyframes shape-one-animation {
+    from {
+      background-position: -27rem -55rem;
+    }
+
+    to {
+      background-position: -10rem -4rem;
+    }
+  }
+  @keyframes shape-two-animation {
+    from {
+      background-position: -31rem -48rem;
+    }
+
+    to {
+      background-position: -29rem -3rem;
+    }
+  }
+  @keyframes shape-three-animation {
+    from {
+      background-position: -28rem -31rem;
+    }
+    to {
+      background-position: -28rem -115rem;
+    }
+  }
+} */
+
+/*for  small laptop */
+/* @media only screen and (max-width: 1430px) and (min-width: 990px) {
+  @keyframes shape-one-animation {
+    from {
+      background-position: -27rem -55rem;
+    }
+
+    to {
+      background-position: -10rem -4rem;
+    }
+  }
+  @keyframes shape-two-animation {
+    from {
+      background-position: -31rem -48rem;
+    }
+
+    to {
+      background-position: -29rem -3rem;
+    }
+  }
+  @keyframes shape-three-animation {
+    from {
+      background-position: -28rem -31rem;
+    }
+    to {
+      background-position: -28rem -115rem;
+    }
+  }
+} */

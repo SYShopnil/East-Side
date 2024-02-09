@@ -1,0 +1,36 @@
+.section {
+  position: relative;
+}
+.section .section-hover-bg {
+  position: absolute;
+  inset: 0;
+  transition: 0.5s ease-in;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.section .section-hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.section .gradient_blue .section-hover-bg {
+  @apply bg-secondaryGradient;
+}
+
+.section .gradient_blue .section-hover-bg {
+  @apply bg-secondaryGradient;
+}
+.section .default.section-hover-bg {
+  @apply bg-transparent;
+}
+.section .white .section-hover-bg {
+  @apply bg-white;
+}
+.section .black .section-hover-bg {
+  @apply bg-black;
+}
+.section .gradient_green .section-hover-bg {
+  @apply bg-primaryGradient;
+}

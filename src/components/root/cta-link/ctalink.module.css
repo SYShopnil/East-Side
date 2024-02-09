@@ -1,0 +1,3 @@
+.esc-cta-link:hover .esc-cta-link-icon {
+    @apply animate-toRightFromLeft
+}

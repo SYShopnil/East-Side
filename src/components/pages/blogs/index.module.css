@@ -1,0 +1,6 @@
+.card-title {
+  transition: border 250ms;
+}
+.card-cover-wrap:hover .card-title {
+  border-bottom: 0.063rem solid #ffff;
+}

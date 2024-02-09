@@ -1,0 +1,6 @@
+.metaTag-animation {
+  transition: all 0.3s ease;
+}
+.metaTag-animation:hover {
+  background: linear-gradient(269.24deg, #4229ef -27.48%, #2bb8e4 112.24%);
+}

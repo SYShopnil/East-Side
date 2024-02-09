@@ -1,0 +1,119 @@
+.contactBlockWrapper {
+  background-color: black;
+  position: relative;
+  z-index: 1;
+}
+
+.contactAnimatedBgWrapper {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+}
+
+.contactAnimatedBgWrapperHoverOut {
+  background: linear-gradient(54.17deg, #2bb8e4 21.35%, #00d855 72.02%);
+  animation: contact-block-animation-hover-out 0.5s ease-in-out both;
+}
+@keyframes contact-block-animation-hover-out {
+  from {
+    height: 155rem;
+    width: var(--screen-size);
+    visibility: visible;
+    left: -138%;
+  }
+  to {
+    height: 5rem;
+    width: 5rem;
+    visibility: hidden;
+  }
+}
+
+.contactAnimatedBgWrapperOnHover {
+  background: linear-gradient(54.17deg, #2bb8e4 21.35%, #00d855 72.02%);
+  animation: contact-block-animation-on-hover 0.7s ease-out both;
+}
+
+@keyframes contact-block-animation-on-hover {
+  from {
+    height: 5rem;
+    width: 5rem;
+    visibility: hidden;
+  }
+  to {
+    height: 255rem;
+    width: var(--screen-size);
+    left: -138%;
+    visibility: visible;
+  }
+}
+
+/* for tablet  */
+@media only screen and (max-width: 1170px) and (min-width: 991px) {
+  @keyframes contact-block-animation-hover-out {
+    from {
+      height: 155rem;
+      width: var(--screen-size);
+      visibility: visible;
+      left: -120%;
+    }
+    to {
+      height: 5rem;
+      width: 5rem;
+      visibility: hidden;
+    }
+  }
+  @keyframes contact-block-animation-on-hover {
+    from {
+      height: 5rem;
+      width: 5rem;
+      visibility: hidden;
+    }
+    to {
+      height: 255rem;
+      width: var(--screen-size);
+      left: -120%;
+      visibility: visible;
+    }
+  }
+}
+
+/* for small device */
+@media (max-width: 990px) {
+  .contactAnimatedBgWrapperAfterHover {
+    animation: contact-block-animation-on-hover 0.7s ease-out both;
+  }
+
+  @keyframes contact-block-animation-hover-out {
+    from {
+      height: 255rem;
+      width: var(--screen-size);
+      visibility: visible;
+      border-radius: 0%;
+    }
+    to {
+      height: 3rem;
+      width: 3rem;
+      visibility: hidden;
+      border-radius: 100%;
+    }
+  }
+
+  @keyframes contact-block-animation-on-hover {
+    from {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 100%;
+      visibility: hidden;
+    }
+    to {
+      height: 255rem;
+      width: var(--screen-size);
+      border-radius: 0%;
+      visibility: visible;
+    }
+  }
+}

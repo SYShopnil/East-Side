@@ -1,0 +1,59 @@
+/* default - white_over_green */
+.esc-button {
+  @apply bg-white text-body;
+  transition: all 0.62s;
+}
+.esc-button:hover {
+  @apply text-white;
+}
+.esc-button:hover .esc-button-bg {
+  border-radius: inherit;
+  z-index: -1;
+  visibility: visible;
+}
+.esc-button .esc-button-bg {
+  display: block;
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  transition: all 0.6s ease-in-out;
+  visibility: hidden;
+}
+
+/* white_over_green */
+.esc-button.white_over_green .esc-button-bg {
+  @apply bg-primaryGradient;
+}
+/* white_over_blue */
+.esc-button.white_over_blue .esc-button-bg {
+  @apply bg-secondaryGradient;
+}
+/* blue_over_green */
+.esc-button.blue_over_green {
+  @apply bg-secondaryGradient text-white;
+}
+.esc-button.blue_over_green .esc-button-bg {
+  @apply bg-primaryGradient;
+}
+
+/* green_over_white */
+.esc-button.green_over_white {
+  @apply bg-primaryGradient text-white;
+}
+.esc-button .esc-button-bg {
+  @apply bg-white;
+}
+.esc-button.green_over_white:hover {
+  @apply text-body;
+}
+
+/* for only the footer redirect button */
+.footerButton {
+  display: block !important;
+  text-align: center;
+}

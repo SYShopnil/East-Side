@@ -1,0 +1,23 @@
+/**
+* The :global() function is used to access global classes.
+*/
+
+// cursor assets
+.cursor-dragging {
+  cursor: url('../../../../public/dragging.svg') 59 30, pointer;
+}
+.cursor-drag {
+  cursor: url('../../../../public/drag.svg') 59 30, pointer;
+}
+
+// underline pagination
+.swiper-main-wrapper {
+  .swiper-container {
+    :global(.swiper-pagination-progressbar) {
+      @apply max-w-[205px] bg-black/[.2] rounded-lg bottom-0 top-auto h-[2px] overflow-hidden relative mt-[50px] mb-[8px];
+      :global(.swiper-pagination-progressbar-fill) {
+        @apply bg-black rounded-lg;
+      }
+    }
+  }
+}

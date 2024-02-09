@@ -1,0 +1,15 @@
+.center-content-block-inner-wrapper {
+  transform: translateY(100%);
+  visibility: visible !important;
+  animation: center-content-block-inner-wrapper-pop-up-animation 1.5s both;
+}
+
+/* this animation will show the inner wrapper a slide animation from the bottom to top   */
+@keyframes center-content-block-inner-wrapper-pop-up-animation {
+  form {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

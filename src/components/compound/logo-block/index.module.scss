@@ -1,0 +1,31 @@
+/**
+* The :global() function is used to access global classes.
+*/
+
+/* logo block alignment  */
+@media (min-width: 992px) {
+  .logo-panel-section {
+    :global(.logo-block-grid) {
+      > div {
+        &:nth-of-type(5n + 1) {
+          text-align: left;
+        }
+        &:nth-of-type(5n + 5) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .logo-panel-section {
+    :global(.logo-block-grid) {
+      row-gap: 30px;
+      min-width: 700px;
+      > div {
+        max-width: 100px;
+        padding: 10px;
+      }
+    }
+  }
+}

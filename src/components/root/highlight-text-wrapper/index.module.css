@@ -1,0 +1,92 @@
+/* this span will control the main text part */
+.parentSpan {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+/* this span will control the animation background part */
+.child-span-animation {
+  transition: background-size webkit-text-fill-color 1.8s;
+  animation: animate 1.8s linear both;
+  font-weight: bold;
+  height: fit-content;
+}
+.childSpan {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: 0%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  width: 100%;
+}
+
+/* this will control the new background layout which will be come as animation part */
+@keyframes animate {
+  0% {
+    background-size: 0%;
+  }
+  25% {
+    background-size: 25%;
+  }
+  50% {
+    background-size: 50%;
+  }
+  75% {
+    background-size: 75%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* for mobile */
+@media (max-width: 1024px) {
+  .child-span-animation {
+    transition: background-size webkit-text-fill-color 3.8s;
+    animation: animate 3.8s linear both;
+  }
+}
+
+/* this will control the root text part which will be hide */
+@keyframes bg-animate {
+  0% {
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: text;
+  }
+  25% {
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: text;
+  }
+  50% {
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: text;
+  }
+  75% {
+    -webkit-text-fill-color: inherit;
+    -webkit-background-clip: text;
+  }
+  100% {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+/* control the background color in a dynamic way */
+.gradient_green .childSpan,
+.default .childSpan,
+.white .childSpan {
+  background-image: linear-gradient(305.63deg, #4229ef 10.49%, #2bb8e4 129.23%);
+}
+
+.black .childSpan,
+.image .childSpan,
+.gradient_blue .childSpan {
+  background-image: linear-gradient(54.17deg, #2bb8e4 21.35%, #00d855 72.02%);
+}
